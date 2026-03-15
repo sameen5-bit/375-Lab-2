@@ -1,0 +1,26 @@
+{
+  "name": "SSE-ENSE370-2026",
+  "dockerFile": "Dockerfile",
+
+  
+
+  // Mount your host folder into the container
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+
+  // VS Code extensions to automatically install inside the container
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.java",
+        "vscjava.vscode-java-pack",
+        "ms-vscode.cpptools",
+        "ms-python.python"
+      ]
+    }
+  },
+
+  // Run as root inside container (simpler for installs)
+  "remoteUser": "root",
+
+}
